@@ -35,6 +35,6 @@ export default function EuiCustomLink({ to, selected, ...props }) {
     history.push(to);
   }
   return (
-    <EuiLink {...props} href={to} onClick={onClick} className={classSelected} />
+    <EuiLink {...props} href={to} onClick={onClick} />
   );
 }
