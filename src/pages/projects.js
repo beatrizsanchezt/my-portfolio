@@ -39,7 +39,7 @@ const Projects = () => (
         </EuiPageHeaderSection>
       </EuiPageHeader>
       <EuiPageContent>
-        <EuiFlexGroup gutterSize="l">
+        <EuiFlexGroup gutterSize="l" style={{ maxWidth: 400 }}>
           <EuiFlexItem>
             <EuiCard
               textAlign="left"
