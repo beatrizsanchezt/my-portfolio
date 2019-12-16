@@ -1,6 +1,4 @@
 import React from "react";
-import './blog.css'
-
 import {
   EuiPage,
   EuiPageBody,
@@ -14,6 +12,7 @@ import {
   EuiSpacer,
   EuiText
 } from "@elastic/eui";
+import "./blog.css";
 
 const Blog = () => (
   <EuiPage>
@@ -41,7 +40,6 @@ const Blog = () => (
               Diego, is free and it teaches some learning techniques explaining
               why they work.
             </p>
-
             <p>
               I am going to try to map some of the techniques in the course to
               my context. I’ve been involved in software development and agile
@@ -59,12 +57,11 @@ const Blog = () => (
               bit and found some material but you are struggling about how to
               learn it quickly.
             </p>
-          
-          <EuiSpacer />
-          <blockquote>
-            <p>Take control of your learning experience</p>
-          </blockquote>
-          <EuiSpacer />
+            <EuiSpacer />
+            <blockquote>
+              <p>Take control of your learning experience</p>
+            </blockquote>
+            <EuiSpacer />
           </EuiText>
           <EuiTitle size="s">
             <h3>Plan weekly and daily</h3>

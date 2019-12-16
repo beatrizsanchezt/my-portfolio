@@ -1,16 +1,32 @@
-import React from 'react';
-
+import React from "react";
 import {
   EuiPage,
   EuiPageBody,
   EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
-} from '@elastic/eui';
+  EuiLink,
+  EuiCard,
+  EuiFlexGroup,
+  EuiFlexItem,
+  EuiIcon
+} from "@elastic/eui";
+import projectIcon from "../assets/images/my-portfolio.png";
+
+const cardFooterContent = (
+  <EuiFlexGroup justifyContent="flexEnd">
+    <EuiFlexItem grow={false}>
+      <EuiIcon type={"logoGithub"} size="xl"></EuiIcon>
+      <EuiLink
+        href="https://github.com/12358-lab/my-portfolio/"
+        target="_blank"
+      >
+        Repo
+      </EuiLink>
+    </EuiFlexItem>
+  </EuiFlexGroup>
+);
 
 const Projects = () => (
   <EuiPage>
@@ -23,14 +39,17 @@ const Projects = () => (
         </EuiPageHeaderSection>
       </EuiPageHeader>
       <EuiPageContent>
-        <EuiPageContentHeader>
-          <EuiPageContentHeaderSection>
-            <EuiTitle>
-              <h2>Content title</h2>
-            </EuiTitle>
-          </EuiPageContentHeaderSection>
-        </EuiPageContentHeader>
-        <EuiPageContentBody>Content body</EuiPageContentBody>
+        <EuiFlexGroup gutterSize="l">
+          <EuiFlexItem>
+            <EuiCard
+              textAlign="left"
+              image={projectIcon}
+              title="My Portfolio"
+              description="This page was made with React amd Elastic UI, as a learning practice."
+              footer={cardFooterContent}
+            />
+          </EuiFlexItem>
+        </EuiFlexGroup>
       </EuiPageContent>
     </EuiPageBody>
   </EuiPage>

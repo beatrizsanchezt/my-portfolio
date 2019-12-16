@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-import "./skills.css";
-import startIcon from "../../assets/images/start.png";
-
+import React, { Component } from "react";
 import {
   EuiPage,
   EuiPageBody,
@@ -9,9 +6,10 @@ import {
   EuiPageHeaderSection,
   EuiTitle,
   EuiBasicTable,
-  EuiIcon,
+  EuiIcon
 } from "@elastic/eui";
-
+import startIcon from "../../assets/images/start.png";
+import "./skills.css";
 
 class Skills extends Component {
   constructor(props) {
@@ -27,50 +25,45 @@ class Skills extends Component {
       { name: "CSS", years: 0.5, level: 2 },
       { name: "HTML", years: 0.5, level: 2 },
       { name: "Spanish", level: 5 },
-      { name: "English", level: 4 },
-    ];    
+      { name: "English", level: 4 }
+    ];
     this.state = {
-      sortField: 'name',
-      sortDirection: 'asc',
+      sortField: "name",
+      sortDirection: "asc",
       skills
     };
   }
 
-  compareValues = (key, order = 'asc') => {
+  compareValues = (key, order = "asc") => {
     return function innerSort(a, b) {
       if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
         // property doesn't exist on either object
         return 0;
       }
-  
-      const varA = (typeof a[key] === 'string')
-        ? a[key].toUpperCase() : a[key];
-      const varB = (typeof b[key] === 'string')
-        ? b[key].toUpperCase() : b[key];
-  
+
+      const varA = typeof a[key] === "string" ? a[key].toUpperCase() : a[key];
+      const varB = typeof b[key] === "string" ? b[key].toUpperCase() : b[key];
+
       let comparison = 0;
       if (varA > varB) {
         comparison = 1;
       } else if (varA < varB) {
         comparison = -1;
       }
-      return (
-        (order === 'desc') ? (comparison * -1) : comparison
-      );
+      return order === "desc" ? comparison * -1 : comparison;
     };
-  }    
+  };
 
-  onTableChange = ({sort = {} }) => {
+  onTableChange = ({ sort = {} }) => {
     const { field: sortField, direction: sortDirection } = sort;
-    const skills= this.state.skills;
-    skills.sort(this.compareValues(sortField, sortDirection))
+    const skills = this.state.skills;
+    skills.sort(this.compareValues(sortField, sortDirection));
 
     this.setState({
       sortField,
-      sortDirection,
+      sortDirection
     });
   };
-
 
   render() {
     const { sortField, sortDirection, skills } = this.state;
@@ -78,8 +71,8 @@ class Skills extends Component {
     const sorting = {
       sort: {
         field: sortField,
-        direction: sortDirection,
-      },
+        direction: sortDirection
+      }
     };
 
     const getLevel = level => {
@@ -96,7 +89,7 @@ class Skills extends Component {
         name: "Skill",
         sortable: true,
         header: true,
-        width: '20%',
+        width: "20%"
       },
       // {
       //   field: "years",
@@ -112,29 +105,29 @@ class Skills extends Component {
         sortable: true,
         header: true,
         render: level => getLevel(level),
-        width: '40%',
+        width: "40%"
       }
     ];
 
     return (
-    <EuiPage>
-      <EuiPageBody>
-        <EuiPageHeader>
-          <EuiPageHeaderSection>
-            <EuiTitle size="l">
-              <h1>Skills</h1>
-            </EuiTitle>
-          </EuiPageHeaderSection>
-        </EuiPageHeader>
-        <EuiBasicTable
-          items={skills}
-          columns={columns}
-          sorting={sorting}
-          onChange={this.onTableChange}  
-        />
-      </EuiPageBody>
-    </EuiPage>
-    )
+      <EuiPage>
+        <EuiPageBody>
+          <EuiPageHeader>
+            <EuiPageHeaderSection>
+              <EuiTitle size="l">
+                <h1>Skills</h1>
+              </EuiTitle>
+            </EuiPageHeaderSection>
+          </EuiPageHeader>
+          <EuiBasicTable
+            items={skills}
+            columns={columns}
+            sorting={sorting}
+            onChange={this.onTableChange}
+          />
+        </EuiPageBody>
+      </EuiPage>
+    );
   }
 }
 

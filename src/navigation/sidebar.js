@@ -24,14 +24,12 @@ class SideBar extends Component {
   };
 
   selectItem = name => {
-    //console.log(name)
     this.setState({
       selectedItemName: name
     });
   };
 
   createItem = (name, data = {}) => {
-    //console.log(this.state.selectedItemName)
     // NOTE: Duplicate `name` values will cause `id` collisions.
     return {
       ...data,

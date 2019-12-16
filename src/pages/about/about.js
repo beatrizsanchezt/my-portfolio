@@ -1,6 +1,4 @@
-import React from 'react';
-import './about.css'
-
+import React from "react";
 import {
   EuiPage,
   EuiPageBody,
@@ -11,8 +9,9 @@ import {
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
-  EuiText,
-} from '@elastic/eui';
+  EuiText
+} from "@elastic/eui";
+import "./about.css";
 
 const About = () => (
   <EuiPage>
@@ -25,16 +24,14 @@ const About = () => (
         </EuiPageHeaderSection>
       </EuiPageHeader>
       <EuiPageContent>
-        <EuiPageContentHeader>
-          <EuiPageContentHeaderSection>
-          </EuiPageContentHeaderSection>
-        </EuiPageContentHeader>
         <EuiPageContentBody>
-          <EuiText grow={false} size="m" className= 'text'>
+          <EuiText grow={false} size="m" className="text">
             <p key={0}>
-              I'm constantly challenge myself to learn something new that I can use for solving problems by creating software. 
-              I love to bring a pragmatic perspective that add fast value to costumers, caring from business needs until deployment and support.
-              As a javascript developer I ...
+              I'm constantly challenge myself to learn something new that I can
+              use for solving problems by creating software. I love to bring a
+              pragmatic perspective that add fast value to costumers, caring
+              from business needs until deployment and support. As a javascript
+              developer I ...
             </p>
           </EuiText>
         </EuiPageContentBody>

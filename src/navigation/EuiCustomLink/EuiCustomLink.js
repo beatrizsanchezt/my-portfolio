@@ -1,6 +1,6 @@
 import React from "react";
-import { EuiLink } from "@elastic/eui";
 import { useHistory } from "react-router";
+import { EuiLink } from "@elastic/eui";
 import "./EuiCustomLink.css";
 
 // Original source: https://github.com/elastic/eui/blob/master/wiki/react-router.md
@@ -34,7 +34,6 @@ export default function EuiCustomLink({ to, selected, ...props }) {
     // Push the route to the history.
     history.push(to);
   }
-  return (
-    <EuiLink {...props} href={to} onClick={onClick} />
-  );
+  
+  return <EuiLink {...props} href={to} onClick={onClick} />;
 }
