@@ -6,7 +6,8 @@ import {
   EuiPageHeaderSection,
   EuiTitle,
   EuiBasicTable,
-  EuiIcon
+  EuiIcon,
+  EuiText
 } from "@elastic/eui";
 import startIcon from "../../assets/images/start.png";
 import "./skills.css";
@@ -15,15 +16,19 @@ class Skills extends Component {
   constructor(props) {
     super(props);
     const skills = [
-      { name: "Github", years: 1, level: 2 },
-      { name: "SQL Server", years: 10, level: 5 },
-      { name: "PL/SQL", years: 10, level: 5 },
-      { name: "Javascript", years: 0.5, level: 2 },
-      { name: ".NET", years: 5, level: 3 },
-      { name: "React", years: 0.5, level: 1 },
-      { name: "R", years: 0.5, level: 1 },
-      { name: "CSS", years: 0.5, level: 2 },
-      { name: "HTML", years: 0.5, level: 2 },
+      { name: "CSS", level: 2 },
+      { name: "HTML", level: 2 },
+      { name: "Javascript", level: 2 },
+      { name: "React", level: 1 },
+      { name: "Automation", level: 1 },
+      { name: "Github", level: 2 },
+      { name: ".NET*", level: 3 },
+      { name: "SQL Server", level: 5 },
+      { name: "PL/SQL", level: 5 },
+      { name: "R", level: 1 },
+      { name: "Agile frameworks", level: 5 },
+      { name: "BDD", level: 4 },
+      { name: "Product owner skills", level: 4 },
       { name: "Spanish", level: 5 },
       { name: "English", level: 4 }
     ];
@@ -91,14 +96,6 @@ class Skills extends Component {
         header: true,
         width: "20%"
       },
-      // {
-      //   field: "years",
-      //   name: "Years of Experience",
-      //   sortable: true,
-      //   header: true,
-      //   dataType: "number",
-      //   width: '30%',
-      // },
       {
         field: "level",
         name: "Level",
@@ -125,6 +122,9 @@ class Skills extends Component {
             sorting={sorting}
             onChange={this.onTableChange}
           />
+          <EuiText className={"footerNote"}>
+            <p>*Interested in develop other skills</p>
+          </EuiText>
         </EuiPageBody>
       </EuiPage>
     );

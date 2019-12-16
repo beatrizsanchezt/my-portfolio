@@ -1,11 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import About from "./pages/about/about";
-import Blog from "./pages/blog/blog";
-import Education from "./pages/education";
-import Layout from "./pages/layout";
-import Projects from "./pages/projects";
-import Skills from "./pages/skills/skills";
+import { About, Blog, Education, Layout, Projects, Skills } from "../src/pages";
 
 function App() {
   return (

@@ -45,7 +45,7 @@ const Projects = () => (
               textAlign="left"
               image={projectIcon}
               title="My Portfolio"
-              description="This page was made with React amd Elastic UI, as a learning practice."
+              description="This page was made using React and Elastic UI with ❤, as a learning practice."
               footer={cardFooterContent}
             />
           </EuiFlexItem>

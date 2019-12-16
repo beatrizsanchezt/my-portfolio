@@ -4,8 +4,6 @@ import {
   EuiPageBody,
   EuiPageContent,
   EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
@@ -30,8 +28,7 @@ const About = () => (
               I'm constantly challenge myself to learn something new that I can
               use for solving problems by creating software. I love to bring a
               pragmatic perspective that add fast value to costumers, caring
-              from business needs until deployment and support. As a javascript
-              developer I ...
+              from business needs until deployment and support.
             </p>
           </EuiText>
         </EuiPageContentBody>
