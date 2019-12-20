@@ -25,9 +25,9 @@ const About = () => (
         <EuiPageContentBody>
           <EuiText grow={false} size="m" className="text">
             <p key={0}>
-              I'm constantly challenge myself to learn something new that I can
+              I'm constantly challenging myself to learn something new that I can
               use for solving problems by creating software. I love to bring a
-              pragmatic perspective that add fast value to costumers, caring
+              pragmatic perspective that adds fast value to costumers, caring
               from business needs until deployment and support.
             </p>
           </EuiText>

@@ -9,10 +9,11 @@ import {
   EuiHeaderLogo
 } from "@elastic/eui";
 import Sidebar from "../navigation/sidebar";
+import "./layout.css";
 
 const Layout = ({children}) => (
   <Fragment>
-    <EuiHeader>
+    <EuiHeader className={'container'}>
       <EuiHeaderSection grow={false}>
         <EuiHeaderSectionItem border="right">
           <EuiHeaderLogo href="#">
@@ -21,7 +22,7 @@ const Layout = ({children}) => (
         </EuiHeaderSectionItem>
       </EuiHeaderSection>
     </EuiHeader>
-    <EuiPage>
+    <EuiPage className={'container'}>
       <EuiPageSideBar>
         <Sidebar />
       </EuiPageSideBar>
