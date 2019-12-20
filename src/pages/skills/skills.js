@@ -18,10 +18,10 @@ class Skills extends Component {
     const skills = [
       { name: "CSS", level: 2 },
       { name: "HTML", level: 2 },
-      { name: "Javascript", level: 2 },
+      { name: "JavaScript", level: 2 },
       { name: "React", level: 1 },
       { name: "Automation", level: 1 },
-      { name: "Github", level: 2 },
+      { name: "GitHub", level: 2 },
       { name: ".NET*", level: 3 },
       { name: "SQL Server", level: 5 },
       { name: "PL/SQL", level: 5 },
@@ -81,9 +81,10 @@ class Skills extends Component {
     };
 
     const getLevel = level => {
-      var starts = [<EuiIcon size="xl" type={startIcon} />];
+      //var starts = [<EuiIcon size="xl" type={startIcon} />];
+      var starts = ['⭐'];
       for (var i = 1; i < level; i++) {
-        starts.push(<EuiIcon size="xl" type={startIcon} />);
+        starts.push('⭐');
       }
       return starts;
     };
