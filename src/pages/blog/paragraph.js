@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { EuiTitle, EuiSpacer, EuiText } from "@elastic/eui";
+
 import "./blog.css";
 
 const Paragraph = ({ title, content }, props) => (
