@@ -41,28 +41,37 @@ class SideBar extends Component {
   };
 
   render() {
-    const sideNav = [
-      this.createItem("About", {
-        icon: <EuiIcon type={aboutIcon} size="xl" />,
+    const menuItems = [
+      {
+        title: "About",
+        iconType: aboutIcon,
         href: "/about"
-      }),
-      this.createItem("Education", {
-        icon: <EuiIcon type={educationIcon} size="xl" />,
+      },
+      {
+        title: "Education",
+        iconType: educationIcon,
         href: "/education"
-      }),
-      this.createItem("Skills", {
-        icon: <EuiIcon type={skillsIcon} size="xl" />,
+      },
+      {
+        title: "Skills",
+        iconType: skillsIcon,
         href: "/skills"
-      }),
-      this.createItem("Projects", {
-        icon: <EuiIcon type={projectsIcon} size="xl" />,
+      },
+      {
+        title: "Projects",
+        iconType: projectsIcon,
         href: "/projects"
-      }),
-      this.createItem("Blog", {
-        icon: <EuiIcon type={blogIcon} size="xl" />,
+      },
+      {
+        title: "Blogs",
+        iconType: blogIcon,
         href: "/blog"
-      })
+      }
     ];
+
+    const sideNav = menuItems.map(
+      item => this.createItem(item.title, { icon: <EuiIcon type={item.iconType} size="xl"/>, href: item.href })
+    );
 
     return (
       <EuiSideNav
