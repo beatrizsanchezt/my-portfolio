@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { EuiIcon, EuiSideNav } from "@elastic/eui";
 import EuiCustomLink from "./EuiCustomLink/EuiCustomLink";
 import aboutIcon from "../assets/images/resume.png";
@@ -7,76 +7,63 @@ import educationIcon from "../assets/images/library.png";
 import projectsIcon from "../assets/images/projects.png";
 import skillsIcon from "../assets/images/skill.png";
 
-class SideBar extends Component {
-  constructor(props) {
-    super(props);
+const SideBar = () => {
+  const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile ] = useState(false);
+  const [selectedItemName, setSelectedItemName ] = useState("About");
 
-    this.state = {
-      isSideNavOpenOnMobile: false,
-      selectedItemName: "About"
-    };
-  }
-
-  toggleOpenOnMobile = () => {
-    this.setState({
-      isSideNavOpenOnMobile: !this.state.isSideNavOpenOnMobile
-    });
+  const toggleOpenOnMobile = () => {
+    setIsSideNavOpenOnMobile(!isSideNavOpenOnMobile);
   };
 
-  selectItem = name => {
-    this.setState({
-      selectedItemName: name
-    });
+  const selectItem = name => {
+      setSelectedItemName(name);
   };
 
-  createItem = (name, data = {}) => {
-    // NOTE: Duplicate `name` values will cause `id` collisions.
+  const createItem = (name, data = {}) => {
     return {
       ...data,
       id: name,
       name,
-      isSelected: this.state.selectedItemName === name,
-      onClick: () => this.selectItem(name)
+      isSelected: selectedItemName === name,
+      onClick: () => selectItem(name)
     };
   };
 
-  render() {
-    const sideNav = [
-      this.createItem("About", {
-        icon: <EuiIcon type={aboutIcon} size="xl" />,
-        href: "/about"
-      }),
-      this.createItem("Education", {
-        icon: <EuiIcon type={educationIcon} size="xl" />,
-        href: "/education"
-      }),
-      this.createItem("Skills", {
-        icon: <EuiIcon type={skillsIcon} size="xl" />,
-        href: "/skills"
-      }),
-      this.createItem("Projects", {
-        icon: <EuiIcon type={projectsIcon} size="xl" />,
-        href: "/projects"
-      }),
-      this.createItem("Blog", {
-        icon: <EuiIcon type={blogIcon} size="xl" />,
-        href: "/blog"
-      })
-    ];
+  const sideNav = [
+    createItem("About", {
+      icon: <EuiIcon type={aboutIcon} size="xl" />,
+      href: "/about"
+    }),
+    createItem("Education", {
+      icon: <EuiIcon type={educationIcon} size="xl" />,
+      href: "/education"
+    }),
+    createItem("Skills", {
+      icon: <EuiIcon type={skillsIcon} size="xl" />,
+      href: "/skills"
+    }),
+    createItem("Projects", {
+      icon: <EuiIcon type={projectsIcon} size="xl" />,
+      href: "/projects"
+    }),
+    createItem("Blog", {
+      icon: <EuiIcon type={blogIcon} size="xl" />,
+      href: "/blog"
+    })
+  ];
 
-    return (
-      <EuiSideNav
-        mobileTitle="Navigate within my Portfolio"
-        toggleOpenOnMobile={this.toggleOpenOnMobile}
-        isOpenOnMobile={this.state.isSideNavOpenOnMobile}
-        items={sideNav}
-        style={{ width: 192 }}
-        renderItem={({ href, children }) => {
-          return <EuiCustomLink to={href}>{children}</EuiCustomLink>;
-        }}
-      />
-    );
-  }
-}
+  return (
+    <EuiSideNav
+      mobileTitle="Navigate within my Portfolio"
+      toggleOpenOnMobile={toggleOpenOnMobile}
+      isOpenOnMobile={isSideNavOpenOnMobile}
+      items={sideNav}
+      style={{ width: 192 }}
+      renderItem={({ href, children }) => {
+        return <EuiCustomLink to={href}>{children}</EuiCustomLink>;
+      }}
+    />
+  );
+};
 
 export default SideBar;
