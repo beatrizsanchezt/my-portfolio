@@ -70,7 +70,7 @@ class SideBar extends Component {
         toggleOpenOnMobile={this.toggleOpenOnMobile}
         isOpenOnMobile={this.state.isSideNavOpenOnMobile}
         items={sideNav}
-        style={{ width: 192 }}
+        style={{ width: '192px' }}
         renderItem={({ href, children }) => {
           return <EuiCustomLink to={href}>{children}</EuiCustomLink>;
         }}
