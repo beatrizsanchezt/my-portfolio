@@ -13,7 +13,7 @@ import "./layout.css";
 
 const Layout = ({children}) => (
   <Fragment>
-    <EuiHeader className={'container'}>
+    <EuiHeader className='container'>
       <EuiHeaderSection grow={false}>
         <EuiHeaderSectionItem border="right">
           <EuiHeaderLogo href="#">
@@ -22,7 +22,7 @@ const Layout = ({children}) => (
         </EuiHeaderSectionItem>
       </EuiHeaderSection>
     </EuiHeader>
-    <EuiPage className={'container'}>
+    <EuiPage className='container'>
       <EuiPageSideBar>
         <Sidebar />
       </EuiPageSideBar>
