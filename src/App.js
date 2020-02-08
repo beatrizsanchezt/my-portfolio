@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 import { About, Blog, Education, Layout, Projects, Skills } from "../src/pages";
 
 function App() {
   return (
-    <React.Fragment>
+    <Fragment>
       <Layout>
         <Switch>
           <Route path="/blog" component={Blog} />
@@ -14,7 +14,7 @@ function App() {
           <Route path="/" component={About} />
         </Switch>
       </Layout>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
