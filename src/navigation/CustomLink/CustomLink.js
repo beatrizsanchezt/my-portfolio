@@ -33,6 +33,6 @@ export default function CustomLink({ to, selected, ...props }) {
     // Push the route to the history.
     history.push(to);
   }
-  
+
   return <EuiLink {...props} href={to} onClick={onClick} />;
 }
