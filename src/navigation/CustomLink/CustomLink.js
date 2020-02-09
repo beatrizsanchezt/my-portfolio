@@ -12,7 +12,7 @@ const isLeftClickEvent = event => event.button === 0;
 export default function CustomLink({ to, selected, ...props }) {
   const history = useHistory();
 
-  const onClick = (event) => {
+  const onClick = event => {
     if (event.defaultPrevented) {
       return;
     }
@@ -31,7 +31,7 @@ export default function CustomLink({ to, selected, ...props }) {
 
     // Push the route to the history.
     history.push(to);
-  }
+  };
 
   return <EuiLink {...props} href={to} onClick={onClick} />;
 }
