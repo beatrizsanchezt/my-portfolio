@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { EuiIcon, EuiSideNav } from "@elastic/eui";
-import EuiCustomLink from "./EuiCustomLink/EuiCustomLink";
+import CustomLink from "./CustomLink/CustomLink";
 import aboutIcon from "../assets/images/resume.png";
 import blogIcon from "../assets/images/blog.png";
 import educationIcon from "../assets/images/library.png";
@@ -8,15 +8,15 @@ import projectsIcon from "../assets/images/projects.png";
 import skillsIcon from "../assets/images/skill.png";
 
 const SideBar = () => {
-  const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile ] = useState(false);
-  const [selectedItemName, setSelectedItemName ] = useState("About");
+  const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
+  const [selectedItemName, setSelectedItemName] = useState("About");
 
   const toggleOpenOnMobile = () => {
     setIsSideNavOpenOnMobile(!isSideNavOpenOnMobile);
   };
 
   const selectItem = name => {
-      setSelectedItemName(name);
+    setSelectedItemName(name);
   };
 
   const createItem = (name, data = {}) => {
@@ -60,7 +60,7 @@ const SideBar = () => {
       items={sideNav}
       style={{ width: 192 }}
       renderItem={({ href, children }) => {
-        return <EuiCustomLink to={href}>{children}</EuiCustomLink>;
+        return <CustomLink to={href}>{children}</CustomLink>;
       }}
     />
   );
