@@ -34,6 +34,6 @@ const CustomLink = ({ to, selected, ...props }) => {
   };
 
   return <EuiLink {...props} href={to} onClick={onClick} />;
-}
+};
 
 export default CustomLink;
