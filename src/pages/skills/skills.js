@@ -10,7 +10,7 @@ import {
   EuiText
 } from "@elastic/eui";
 
-import "./skills.css";
+import "./Skills.css";
 
 const Skills = () => {
   const skillsArray = [
