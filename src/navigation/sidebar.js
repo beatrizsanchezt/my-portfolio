@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { EuiIcon, EuiSideNav } from "@elastic/eui";
-import CustomLink from "./EuiCustomLink/EuiCustomLink";
+import EuiCustomLink from "./EuiCustomLink/EuiCustomLink";
 import aboutIcon from "../assets/images/resume.png";
 import blogIcon from "../assets/images/blog.png";
 import educationIcon from "../assets/images/library.png";
@@ -72,7 +72,7 @@ class SideBar extends Component {
         items={sideNav}
         style={{ width: 192 }}
         renderItem={({ href, children }) => {
-          return <CustomLink to={href}>{children}</CustomLink>;
+          return <EuiCustomLink to={href}>{children}</EuiCustomLink>;
         }}
       />
     );

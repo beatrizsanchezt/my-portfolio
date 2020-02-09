@@ -9,7 +9,7 @@ const isModifiedEvent = event =>
 
 const isLeftClickEvent = event => event.button === 0;
 
-export default function CustomLink({ to, selected, ...props }) {
+export default function EuiCustomLink({ to, selected, ...props }) {
   // This is the key!
   const history = useHistory();
 
