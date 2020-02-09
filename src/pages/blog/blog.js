@@ -13,6 +13,7 @@ import {
   EuiText
 } from "@elastic/eui";
 import Paragraph from "./paragraph";
+
 import "./blog.css";
 
 const Blog = () => (
