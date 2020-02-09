@@ -9,7 +9,7 @@ const isModifiedEvent = event =>
 
 const isLeftClickEvent = event => event.button === 0;
 
-export default function CustomLink({ to, selected, ...props }) {
+const CustomLink = ({ to, selected, ...props }) => {
   const history = useHistory();
 
   const onClick = event => {
@@ -34,4 +34,6 @@ export default function CustomLink({ to, selected, ...props }) {
   };
 
   return <EuiLink {...props} href={to} onClick={onClick} />;
-}
+};
+
+export default CustomLink;
