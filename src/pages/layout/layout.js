@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
     <EuiHeader className={"container"}>
       <EuiHeaderSection grow={false}>
         <EuiHeaderSectionItem border="right">
-          <EuiHeaderLogo href="#">
+          <EuiHeaderLogo href="/about">
             Beatriz Sanchez - Full Stack Developer
           </EuiHeaderLogo>
         </EuiHeaderSectionItem>
