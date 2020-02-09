@@ -10,10 +10,10 @@ import {
   EuiIcon,
   EuiCard
 } from "@elastic/eui";
-import icesiIcon from "../assets/images/icesi.jpg";
-import courseraIcon from "../assets/images/coursera.png";
-import isqtbIcon from "../assets/images/isqtb.png";
-import arcituraIcon from "../assets/images/arcitura.png";
+import icesiIcon from "../../assets/images/icesi.jpg";
+import courseraIcon from "../../assets/images/coursera.png";
+import isqtbIcon from "../../assets/images/isqtb.png";
+import arcituraIcon from "../../assets/images/arcitura.png";
 
 const iconTypes = [
   {
