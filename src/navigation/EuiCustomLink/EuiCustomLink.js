@@ -13,7 +13,7 @@ export default function CustomLink({ to, selected, ...props }) {
   // This is the key!
   const history = useHistory();
 
-  const onClick = (event) => {
+  const onClick = event => {
     if (event.defaultPrevented) {
       return;
     }
@@ -32,7 +32,7 @@ export default function CustomLink({ to, selected, ...props }) {
 
     // Push the route to the history.
     history.push(to);
-  }
-  
+  };
+
   return <EuiLink {...props} href={to} onClick={onClick} />;
 }
