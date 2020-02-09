@@ -10,10 +10,9 @@ const isModifiedEvent = event =>
 const isLeftClickEvent = event => event.button === 0;
 
 export default function CustomLink({ to, selected, ...props }) {
-  // This is the key!
   const history = useHistory();
 
-  function onClick(event) {
+  const onClick = (event) => {
     if (event.defaultPrevented) {
       return;
     }
