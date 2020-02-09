@@ -7,6 +7,34 @@ import educationIcon from "../assets/images/library.png";
 import projectsIcon from "../assets/images/projects.png";
 import skillsIcon from "../assets/images/skill.png";
 
+const menuItems = [
+  {
+    title: "About",
+    iconType: aboutIcon,
+    href: "/about"
+  },
+  {
+    title: "Education",
+    iconType: educationIcon,
+    href: "/education"
+  },
+  {
+    title: "Skills",
+    iconType: skillsIcon,
+    href: "/skills"
+  },
+  {
+    title: "Projects",
+    iconType: projectsIcon,
+    href: "/projects"
+  },
+  {
+    title: "Blogs",
+    iconType: blogIcon,
+    href: "/blog"
+  }
+];
+
 const SideBar = () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
   const [selectedItemName, setSelectedItemName] = useState("About");
@@ -29,28 +57,12 @@ const SideBar = () => {
     };
   };
 
-  const sideNav = [
-    createItem("About", {
-      icon: <EuiIcon type={aboutIcon} size="xl" />,
-      href: "/about"
-    }),
-    createItem("Education", {
-      icon: <EuiIcon type={educationIcon} size="xl" />,
-      href: "/education"
-    }),
-    createItem("Skills", {
-      icon: <EuiIcon type={skillsIcon} size="xl" />,
-      href: "/skills"
-    }),
-    createItem("Projects", {
-      icon: <EuiIcon type={projectsIcon} size="xl" />,
-      href: "/projects"
-    }),
-    createItem("Blog", {
-      icon: <EuiIcon type={blogIcon} size="xl" />,
-      href: "/blog"
+  const sideNav = menuItems.map(item =>
+    createItem(item.title, {
+      icon: <EuiIcon type={item.iconType} size="xl" />,
+      href: item.href
     })
-  ];
+  );
 
   return (
     <EuiSideNav
