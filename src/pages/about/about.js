@@ -9,6 +9,7 @@ import {
   EuiTitle,
   EuiText
 } from "@elastic/eui";
+
 import "./about.css";
 
 const About = () => (

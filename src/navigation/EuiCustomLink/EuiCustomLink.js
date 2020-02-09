@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { EuiLink } from "@elastic/eui";
+
 import "./EuiCustomLink.css";
 
 // Original source: https://github.com/elastic/eui/blob/master/wiki/react-router.md
