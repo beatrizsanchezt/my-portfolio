@@ -9,7 +9,7 @@ import {
   EuiIcon,
   EuiText
 } from "@elastic/eui";
-import startIcon from "../../assets/images/start.png";
+
 import "./skills.css";
 
 class Skills extends Component {
