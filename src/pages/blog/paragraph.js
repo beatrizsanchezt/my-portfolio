@@ -3,7 +3,7 @@ import { EuiTitle, EuiSpacer, EuiText } from "@elastic/eui";
 
 import "./blog.css";
 
-const Paragraph = ({ title, content }, props) => (
+const Paragraph = ({ title, content }) => (
   <Fragment>
     <EuiTitle size="s">
       <h3>{title}</h3>
