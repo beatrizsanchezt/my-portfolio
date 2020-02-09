@@ -1,20 +1,18 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { EuiLink } from "@elastic/eui";
-import "./EuiCustomLink.css";
+import "./CustomLink.css";
 
-// Original source: https://github.com/elastic/eui/blob/master/wiki/react-router.md
-// Most of the content of this files are from https://github.com/elastic/eui/pull/1976.
+// Source: https://github.com/elastic/eui/blob/master/wiki/react-router.md
 const isModifiedEvent = event =>
   !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 
 const isLeftClickEvent = event => event.button === 0;
 
-EuiCustomLink = ({ to, selected, ...props }) => {
-  // This is the key!
+const CustomLink = ({ to, selected, ...props }) => {
   const history = useHistory();
 
-  function onClick(event) {
+  const onClick = event => {
     if (event.defaultPrevented) {
       return;
     }
@@ -33,9 +31,9 @@ EuiCustomLink = ({ to, selected, ...props }) => {
 
     // Push the route to the history.
     history.push(to);
-  }
-  
+  };
+
   return <EuiLink {...props} href={to} onClick={onClick} />;
 }
 
-export default EuiCustomLink;
+export default CustomLink;

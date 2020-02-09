@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "@elastic/eui/dist/eui_theme_light.css";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+import "@elastic/eui/dist/eui_theme_light.css";
 
 const app = (
   <BrowserRouter>
