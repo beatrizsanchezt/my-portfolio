@@ -10,7 +10,7 @@ import {
   EuiText
 } from "@elastic/eui";
 
-import "./about.css";
+import "./About.css";
 
 const About = () => (
   <EuiPage>
@@ -26,9 +26,9 @@ const About = () => (
         <EuiPageContentBody>
           <EuiText grow={false} size="m" className="text">
             <p key={0}>
-              I'm constantly challenging myself to learn something new that I can
-              use for solving problems by creating software. I love to bring a
-              pragmatic perspective that adds fast value to costumers, caring
+              I'm constantly challenging myself to learn something new that I
+              can use for solving problems by creating software. I love to bring
+              a pragmatic perspective that adds fast value to costumers, caring
               from business needs until deployment and support.
             </p>
           </EuiText>

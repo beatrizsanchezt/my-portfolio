@@ -8,9 +8,9 @@ import {
   EuiHeaderSectionItem,
   EuiHeaderLogo
 } from "@elastic/eui";
-import Sidebar from "../../navigation/sidebar";
+import Sidebar from "../../navigation/SideBar/SideBar";
 
-import "./layout.css";
+import "./Layout.css";
 
 const Layout = ({ children }) => (
   <Fragment>
