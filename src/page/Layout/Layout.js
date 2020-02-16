@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from "./node_modules/react";
 import {
   EuiPage,
   EuiPageBody,
@@ -8,7 +8,7 @@ import {
   EuiHeaderSectionItem,
   EuiHeaderLogo
 } from "@elastic/eui";
-import Sidebar from "../../navigation/SideBar/SideBar";
+import Sidebar from "../../navigation_/SideBar/SideBar";
 
 import "./Layout.css";
 
