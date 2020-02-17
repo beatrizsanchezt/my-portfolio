@@ -24,7 +24,7 @@ const About = () => (
       </EuiPageHeader>
       <EuiPageContent>
         <EuiPageContentBody>
-          <EuiText grow={false} size="m" className="text">
+          <EuiText className="text">
             <p key={0}>
               I'm constantly challenging myself to learn something new that I
               can use for solving problems by creating software. I love to bring
