@@ -1,26 +1,25 @@
 # Welcome to my Portfolio
 
-This project was made using React and Elastic UI as a learning practice.
+This project was made using [React](https://reactjs.org/) and [Elastic UI](https://elastic.github.io/) as a learning practice.
 
-This is the latest version is deployed here: www.beatrizsanchez.dev
+The latest version is deployed [here](https://www.beatrizsanchez.dev).
 
 ![My Portfolio image](src/assets/images/myPortfolioEducation.png)
 
 ## Setup
 
-To run this project, install it locally using npm:
+To run this project using npm:
 
 ```
-$ cd ../myPortfolio
 $ npm install
 $ npm start
 ```
 
 ## Features
 
-- **About**: A short description about myself
-- **Education**: Cards was used to display diplomas and certifications.
-- **Skills**: A table with sort option by column header, shows my skilss and levels. Hooks were implemented here.
+- **About**: A short description about myself.
+- **Education**: Cards were used to display diplomas and certifications.
+- **Skills**: A table with sorting option by column header, shows my skilss and levels. Hooks were used here.
 - **Projects**: A card displays information about this project, and a link to this repository.
 - **Blog**: Here I used different text components for displaying a short article that I wrote.
 
@@ -31,4 +30,4 @@ I took inspiration from [this portfolio](https://andrewborstein.com/).
 ## Future features
 
 - Unit Testing with Jest.
-- I want to change Project section and read my projects from Github.
+- I want to change the Project section and fetch my projects from Github.
