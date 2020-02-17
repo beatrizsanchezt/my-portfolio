@@ -12,8 +12,9 @@ import {
   EuiSpacer,
   EuiText
 } from "@elastic/eui";
-import Paragraph from "./paragraph";
-import "./blog.css";
+import Paragraph from "./Paragraph";
+
+import "./Blog.css";
 
 const Blog = () => (
   <EuiPage>

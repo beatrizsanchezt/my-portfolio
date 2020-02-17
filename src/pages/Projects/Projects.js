@@ -12,7 +12,7 @@ import {
   EuiFlexItem,
   EuiIcon
 } from "@elastic/eui";
-import projectIcon from "../assets/images/my-portfolio.png";
+import projectIcon from "../../assets/images/my-portfolio.png";
 
 const cardFooterContent = (
   <EuiFlexGroup justifyContent="flexEnd">

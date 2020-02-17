@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import {
   EuiPage,
   EuiPageBody,
@@ -8,21 +8,22 @@ import {
   EuiHeaderSectionItem,
   EuiHeaderLogo
 } from "@elastic/eui";
-import Sidebar from "../../navigation/sidebar";
-import "./layout.css";
+import Sidebar from "../../navigation/SideBar/SideBar";
 
-const Layout = ({children}) => (
+import "./Layout.css";
+
+const Layout = ({ children }) => (
   <Fragment>
-    <EuiHeader className={'container'}>
+    <EuiHeader className="container">
       <EuiHeaderSection grow={false}>
         <EuiHeaderSectionItem border="right">
-          <EuiHeaderLogo href="#">
+          <EuiHeaderLogo href="/about">
             Beatriz Sanchez - Full Stack Developer
           </EuiHeaderLogo>
         </EuiHeaderSectionItem>
       </EuiHeaderSection>
     </EuiHeader>
-    <EuiPage className={'container'}>
+    <EuiPage className="container">
       <EuiPageSideBar>
         <Sidebar />
       </EuiPageSideBar>

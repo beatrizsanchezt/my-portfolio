@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { EuiTitle, EuiSpacer, EuiText } from "@elastic/eui";
-import "./blog.css";
 
-const Paragraph = ({ title, content }, props) => (
+import "./Blog.css";
+
+const Paragraph = ({ title, content }) => (
   <Fragment>
     <EuiTitle size="s">
       <h3>{title}</h3>
