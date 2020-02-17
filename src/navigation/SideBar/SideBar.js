@@ -71,9 +71,9 @@ const SideBar = () => {
       isOpenOnMobile={isSideNavOpenOnMobile}
       items={sideNav}
       style={{ width: "192px" }}
-      renderItem={({ href, children }) => {
-        return <CustomLink to={href}>{children}</CustomLink>;
-      }}
+      renderItem={({ href, children }) => (
+        <CustomLink to={href}>{children}</CustomLink>
+      )}
     />
   );
 };
