@@ -64,7 +64,7 @@ const Blog = () => (
                 </p>
               </Fragment>
             }
-          ></Paragraph>
+          />
           <EuiText>
             <blockquote>
               <p>Take control of your learning experience</p>
@@ -97,7 +97,7 @@ const Blog = () => (
                 </p>
               </Fragment>
             }
-          ></Paragraph>
+          />
           <Paragraph
             title="The Pomodoro technique"
             content={
@@ -112,7 +112,7 @@ const Blog = () => (
                 the habit will come.
               </p>
             }
-          ></Paragraph>
+          />
           <Paragraph
             title="Deliberate practice"
             content={
@@ -124,7 +124,7 @@ const Blog = () => (
                 or search for it on the internet.
               </p>
             }
-          ></Paragraph>
+          />
           <Paragraph
             title="Eat your frogs first"
             content={
@@ -141,7 +141,7 @@ const Blog = () => (
                 on Wednesday and test it for a few weeks.
               </p>
             }
-          ></Paragraph>
+          />
           <Paragraph
             title="Avoid multitasking"
             content={
@@ -162,7 +162,7 @@ const Blog = () => (
                 is when you can have those mind journeys.
               </p>
             }
-          ></Paragraph>
+          />
           <Paragraph
             title="Exercise and eat healthy"
             content={
@@ -172,7 +172,7 @@ const Blog = () => (
                 on the discussion section below the title.
               </p>
             }
-          ></Paragraph>
+          />
         </EuiPageContentBody>
       </EuiPageContent>
     </EuiPageBody>
