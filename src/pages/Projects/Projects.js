@@ -6,12 +6,10 @@ import {
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
-  EuiLink,
   EuiButton,
   EuiCard,
   EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon
+  EuiFlexItem
 } from "@elastic/eui";
 import projectIcon from "../../assets/images/my-portfolio.png";
 
