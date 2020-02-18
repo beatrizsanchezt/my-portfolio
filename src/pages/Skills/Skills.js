@@ -6,10 +6,9 @@ import {
   EuiPageHeaderSection,
   EuiTitle,
   EuiBasicTable,
-  EuiIcon,
   EuiText
 } from "@elastic/eui";
-
+import sortTableValues from "../../utils/sortTableValues";
 import "./Skills.css";
 
 const Skills = () => {
@@ -35,28 +34,9 @@ const Skills = () => {
   const [sortDirection, setsortDirection] = React.useState("asc");
   const [skills] = React.useState(skillsArray);
 
-  const compareValues = (key, order = "asc") => {
-    return function innerSort(a, b) {
-      if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
-        return 0;
-      }
-
-      const varA = typeof a[key] === "string" ? a[key].toUpperCase() : a[key];
-      const varB = typeof b[key] === "string" ? b[key].toUpperCase() : b[key];
-
-      let comparison = 0;
-      if (varA > varB) {
-        comparison = 1;
-      } else if (varA < varB) {
-        comparison = -1;
-      }
-      return order === "desc" ? comparison * -1 : comparison;
-    };
-  };
-
   const onTableChange = ({ sort = {} }) => {
     const { field: sortField, direction: sortDirection } = sort;
-    skills.sort(compareValues(sortField, sortDirection));
+    skills.sort(sortTableValues(sortField, sortDirection));
     setSortField(sortField);
     setsortDirection(sortDirection);
   };
