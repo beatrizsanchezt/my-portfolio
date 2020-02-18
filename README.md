@@ -2,7 +2,7 @@
 
 This project was made using [React](https://reactjs.org/) and [Elastic UI](https://elastic.github.io/) as a learning practice.
 
-The latest version is deployed [here](https://www.beatrizsanchez.dev).
+The latest version is deployed [here](https://beatrizsanchez.dev).
 
 ![My Portfolio image](src/assets/images/myPortfolioEducation.png)
 
