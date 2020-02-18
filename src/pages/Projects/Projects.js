@@ -7,6 +7,7 @@ import {
   EuiPageHeaderSection,
   EuiTitle,
   EuiLink,
+  EuiButton,
   EuiCard,
   EuiFlexGroup,
   EuiFlexItem,
@@ -17,13 +18,13 @@ import projectIcon from "../../assets/images/my-portfolio.png";
 const cardFooterContent = (
   <EuiFlexGroup justifyContent="flexEnd">
     <EuiFlexItem grow={false}>
-      <EuiIcon type={"logoGithub"} size="xl"></EuiIcon>
-      <EuiLink
+      <EuiButton
+        iconType="logoGithub"
         href="https://github.com/12358-lab/my-portfolio/"
         target="_blank"
       >
-        Repo
-      </EuiLink>
+        Go to Repo
+      </EuiButton>
     </EuiFlexItem>
   </EuiFlexGroup>
 );
