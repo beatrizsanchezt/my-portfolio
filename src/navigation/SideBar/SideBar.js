@@ -1,68 +1,64 @@
-import React, { useState } from "react";
-import { EuiIcon, EuiSideNav } from "@elastic/eui";
-import CustomLink from "../CustomLink/CustomLink";
-import aboutIcon from "../../assets/images/resume.png";
-import blogIcon from "../../assets/images/blog.png";
-import educationIcon from "../../assets/images/library.png";
-import projectsIcon from "../../assets/images/projects.png";
-import skillsIcon from "../../assets/images/skill.png";
+import React, { useState } from 'react';
+import { EuiIcon, EuiSideNav } from '@elastic/eui';
+import CustomLink from '../CustomLink/CustomLink';
+import aboutIcon from '../../assets/images/resume.png';
+import blogIcon from '../../assets/images/blog.png';
+import educationIcon from '../../assets/images/library.png';
+import projectsIcon from '../../assets/images/projects.png';
+import skillsIcon from '../../assets/images/skill.png';
 
 const menuItems = [
   {
-    title: "About",
+    title: 'About',
     iconType: aboutIcon,
-    href: "/about"
+    href: '/about',
   },
   {
-    title: "Education",
+    title: 'Education',
     iconType: educationIcon,
-    href: "/education"
+    href: '/education',
   },
   {
-    title: "Skills",
+    title: 'Skills',
     iconType: skillsIcon,
-    href: "/skills"
+    href: '/skills',
   },
   {
-    title: "Projects",
+    title: 'Projects',
     iconType: projectsIcon,
-    href: "/projects"
+    href: '/projects',
   },
   {
-    title: "Blogs",
+    title: 'Blogs',
     iconType: blogIcon,
-    href: "/blog"
-  }
+    href: '/blog',
+  },
 ];
 
 const SideBar = () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
-  const [selectedItemName, setSelectedItemName] = useState("About");
+  const [selectedItemName, setSelectedItemName] = useState('About');
 
   const toggleOpenOnMobile = () => {
     setIsSideNavOpenOnMobile(!isSideNavOpenOnMobile);
   };
 
-  const selectItem = name => {
+  const selectItem = (name) => {
     setSelectedItemName(name);
   };
 
-  const createItem = (name, data = {}) => {
-    return {
-      ...data,
-      id: name,
-      name,
-      isSelected: selectedItemName === name,
-      onClick: () => selectItem(name)
-    };
-  };
+  const createItem = (name, data = {}) => ({
+    ...data,
+    id: name,
+    name,
+    isSelected: selectedItemName === name,
+    onClick: () => selectItem(name),
+  });
 
-  const sideNav = menuItems.map(item =>
-    createItem(item.title, {
-      icon: <EuiIcon type={item.iconType} size="xl" />,
-      href: item.href
-    })
-  );
+  const sideNav = menuItems.map((item) => createItem(item.title, {
+    icon: <EuiIcon type={item.iconType} size="xl" />,
+    href: item.href,
+  }));
 
   return (
     <EuiSideNav
@@ -70,7 +66,7 @@ const SideBar = () => {
       toggleOpenOnMobile={toggleOpenOnMobile}
       isOpenOnMobile={isSideNavOpenOnMobile}
       items={sideNav}
-      style={{ width: "192px" }}
+      style={{ width: '192px' }}
       renderItem={({ href, children }) => (
         <CustomLink to={href}>{children}</CustomLink>
       )}

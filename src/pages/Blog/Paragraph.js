@@ -1,16 +1,17 @@
-import React, { Fragment } from "react";
-import { EuiTitle, EuiSpacer, EuiText } from "@elastic/eui";
+import React from 'react';
+import { EuiTitle, EuiSpacer, EuiText } from '@elastic/eui';
 
-import "./Blog.css";
+import './Blog.css';
 
+// eslint-disable-next-line react/prop-types
 const Paragraph = ({ title, content }) => (
-  <Fragment>
+  <>
     <EuiTitle size="s">
       <h3>{title}</h3>
     </EuiTitle>
     <EuiText className="textBlog">{content}</EuiText>
     <EuiSpacer />
-  </Fragment>
+  </>
 );
 
 export default Paragraph;

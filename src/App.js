@@ -1,6 +1,8 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import { About, Blog, Education, Layout, Projects, Skills } from "../src/pages";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import {
+  About, Blog, Education, Layout, Projects, Skills,
+} from './pages';
 
 function App() {
   return (
