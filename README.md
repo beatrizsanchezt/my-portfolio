@@ -4,7 +4,7 @@ This project was made using [React](https://reactjs.org/) and [Elastic UI](https
 
 The latest version is deployed [here](https://beatrizsanchez.dev).
 
-![My Portfolio image](src/assets/images/myPortfolioEducation.png)
+![My Portfolio image](src/assets/images/myPortfolioLg.png)
 
 ## Setup
 
