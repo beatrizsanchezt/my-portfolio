@@ -6,7 +6,6 @@ import {
   EuiPageHeaderSection,
   EuiTitle,
   EuiBasicTable,
-  EuiIcon,
   EuiText
 } from "@elastic/eui";
 
