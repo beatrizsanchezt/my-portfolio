@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from 'react';
 import {
   EuiPage,
   EuiPageBody,
@@ -10,11 +10,11 @@ import {
   EuiPageHeaderSection,
   EuiTitle,
   EuiSpacer,
-  EuiText
-} from "@elastic/eui";
-import Paragraph from "./Paragraph";
+  EuiText,
+} from '@elastic/eui';
+import Paragraph from './Paragraph';
 
-import "./Blog.css";
+import './Blog.css';
 
 const Blog = () => (
   <EuiPage>
@@ -36,8 +36,8 @@ const Blog = () => (
         </EuiPageContentHeader>
         <EuiPageContentBody>
           <Paragraph
-            content={
-              <Fragment>
+            content={(
+              <>
                 <p>
                   Learning how to learn is one of the most successful courses in
                   Coursera. By McMaster University & University of California
@@ -57,13 +57,13 @@ const Blog = () => (
                   you work in a maintenance project, chances to get outdated or
                   not be considered for a more exciting job increases if you do
                   not learn new things on your own time, but how to achieve
-                  this? Let's consider that you already found a new programming
+                  this? Let&apos;s consider that you already found a new programming
                   language, library or framework that you want to learn, you
                   have researched a bit and found some material but you are
                   struggling about how to learn it quickly.
                 </p>
-              </Fragment>
-            }
+              </>
+            )}
           />
           <EuiText>
             <blockquote>
@@ -73,8 +73,8 @@ const Blog = () => (
           <EuiSpacer />
           <Paragraph
             title="Plan weekly and daily"
-            content={
-              <Fragment>
+            content={(
+              <>
                 <p>
                   If you are working on agile methodologies you might be
                   familiar with the concept of POC. If something is unknown,
@@ -84,7 +84,7 @@ const Blog = () => (
                   also your finish time and some leisure activities.
                 </p>
                 <p>
-                  I've used a couple of approaches, the one that I like the most
+                  I&apos;ve used a couple of approaches, the one that I like the most
                   is to have separate calendars for my work and my personal
                   life, so one regular day could look like this: At work I have
                   a similar calendar with more specific work related tasks, and
@@ -95,27 +95,27 @@ const Blog = () => (
                   name, as I usually have the same working hours, duplicate
                   cards works for me.
                 </p>
-              </Fragment>
-            }
+              </>
+            )}
           />
           <Paragraph
             title="The Pomodoro technique"
-            content={
+            content={(
               <p>
                 This works well also at work. If you need help to avoid some
                 distractions, plan yourself for being 15-20 minutes working in
                 one task, and give you 5 or so for being distracted. After 4
-                pomodoros you should plan for a longer rest, let's say 20
+                pomodoros you should plan for a longer rest, let&apos;s say 20
                 minutes. You can use Chrome extensions like Marinara Pomodoro
                 Assistant if you want extra help with timing. Try different time
                 configurations for a while and see if that works for you, if so,
                 the habit will come.
               </p>
-            }
+            )}
           />
           <Paragraph
             title="Deliberate practice"
-            content={
+            content={(
               <p>
                 If you are learning a new programming language, try to include
                 problems of different levels and work on the hardest ones for
@@ -123,11 +123,11 @@ const Blog = () => (
                 the level over time, but you can jump to more advanced material
                 or search for it on the internet.
               </p>
-            }
+            )}
           />
           <Paragraph
             title="Eat your frogs first"
-            content={
+            content={(
               <p>
                 Tracking your daily routine for a while could give you useful
                 insights about your habits, when you feel more energetic, what
@@ -140,14 +140,14 @@ const Blog = () => (
                 desk, and I was starting again on Sunday. So I will add a break
                 on Wednesday and test it for a few weeks.
               </p>
-            }
+            )}
           />
           <Paragraph
             title="Avoid multitasking"
-            content={
+            content={(
               <p>
                 At some point I was amazed by people who could keep a
-                face-to-face conversation and multiple chats "at the same time",
+                face-to-face conversation and multiple chats &quot;at the same time&quot;,
                 not anymore. Multitasking is proven to be ineffective, not only
                 in your learning process but also in your interactions, but how
                 to overcome this bad habit that I have for years? In my case
@@ -161,17 +161,17 @@ const Blog = () => (
                 Remember, plan for leisure activities, exercise and rest, that
                 is when you can have those mind journeys.
               </p>
-            }
+            )}
           />
           <Paragraph
             title="Exercise and eat healthy"
-            content={
+            content={(
               <p>
                 Perhaps you are sick of this, but, it works. Hope this is useful
                 for someone, if you have comments or questions, just let me know
                 on the discussion section below the title.
               </p>
-            }
+            )}
           />
         </EuiPageContentBody>
       </EuiPageContent>

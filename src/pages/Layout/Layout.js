@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from 'react';
 import {
   EuiPage,
   EuiPageBody,
@@ -6,14 +6,15 @@ import {
   EuiHeader,
   EuiHeaderSection,
   EuiHeaderSectionItem,
-  EuiHeaderLogo
-} from "@elastic/eui";
-import Sidebar from "../../navigation/SideBar/SideBar";
+  EuiHeaderLogo,
+} from '@elastic/eui';
+import Sidebar from '../../navigation/SideBar/SideBar';
 
-import "./Layout.css";
+import './Layout.css';
 
+// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => (
-  <Fragment>
+  <>
     <EuiHeader className="container">
       <EuiHeaderSection grow={false}>
         <EuiHeaderSectionItem border="right">
@@ -29,7 +30,7 @@ const Layout = ({ children }) => (
       </EuiPageSideBar>
       <EuiPageBody>{children}</EuiPageBody>
     </EuiPage>
-  </Fragment>
+  </>
 );
 
 export default Layout;

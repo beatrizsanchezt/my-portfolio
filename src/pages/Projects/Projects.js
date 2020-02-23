@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   EuiPage,
   EuiPageBody,
@@ -6,14 +6,12 @@ import {
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
-  EuiLink,
   EuiButton,
   EuiCard,
   EuiFlexGroup,
   EuiFlexItem,
-  EuiIcon
-} from "@elastic/eui";
-import projectIcon from "../../assets/images/my-portfolio.png";
+} from '@elastic/eui';
+import projectIcon from '../../assets/images/my-portfolio.png';
 
 const cardFooterContent = (
   <EuiFlexGroup justifyContent="flexEnd">
