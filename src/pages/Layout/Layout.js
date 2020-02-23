@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   EuiPage,
   EuiPageBody,
@@ -12,7 +13,6 @@ import Sidebar from '../../navigation/SideBar/SideBar';
 
 import './Layout.css';
 
-// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => (
   <>
     <EuiHeader className="container">
@@ -32,5 +32,9 @@ const Layout = ({ children }) => (
     </EuiPage>
   </>
 );
+
+Layout.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 export default Layout;

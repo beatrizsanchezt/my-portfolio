@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
 import { EuiLink } from '@elastic/eui';
 import './CustomLink.css';
@@ -8,7 +9,6 @@ const isModifiedEvent = (event) => !!(event.metaKey || event.altKey || event.ctr
 
 const isLeftClickEvent = (event) => event.button === 0;
 
-// eslint-disable-next-line react/prop-types
 const CustomLink = ({ to, ...props }) => {
   const history = useHistory();
 
@@ -35,6 +35,10 @@ const CustomLink = ({ to, ...props }) => {
 
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <EuiLink {...props} href={to} onClick={onClick} />;
+};
+
+CustomLink.propTypes = {
+  to: PropTypes.string.isRequired,
 };
 
 export default CustomLink;
