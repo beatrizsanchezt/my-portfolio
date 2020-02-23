@@ -1,6 +1,15 @@
+/** *
+  * This code returns a compare function to be used in a sort with object elements.
+  * It validates that the elements to be sorted contains the property to be sorted.
+  * For strings, the uppercase text is used for comparision.
+  * @param  {string} key    Property to be sorted
+  * @param  {string} order  asc/desc
+  * @return {function}      Compare funtion that should be used in a sort method as parameter
+*/
+
 // eslint-disable-next-line import/prefer-default-export
 export const sortTableValues = (key, order = 'asc') => (a, b) => {
-  if (!Object.prototype.hasOwnProperty.call(a, key) || !Object.prototype.hasOwnProperty.call(b, key)) {
+  if (a[key] === undefined || b[key] === undefined) {
     return 0;
   }
 
