@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   EuiPage,
   EuiPageBody,
@@ -8,34 +8,34 @@ import {
   EuiFlexGrid,
   EuiFlexItem,
   EuiIcon,
-  EuiCard
-} from "@elastic/eui";
-import icesiIcon from "../../assets/images/icesi.jpg";
-import courseraIcon from "../../assets/images/coursera.png";
-import isqtbIcon from "../../assets/images/isqtb.png";
-import arcituraIcon from "../../assets/images/arcitura.png";
+  EuiCard,
+} from '@elastic/eui';
+import icesiIcon from '../../assets/images/icesi.jpg';
+import courseraIcon from '../../assets/images/coursera.png';
+import isqtbIcon from '../../assets/images/isqtb.png';
+import arcituraIcon from '../../assets/images/arcitura.png';
 
 const iconTypes = [
   {
     logo: icesiIcon,
-    name: "Bachelor Systems Engineering",
-    description: "1999-2005"
+    name: 'Bachelor Systems Engineering',
+    description: '1999-2005',
   },
   {
     logo: courseraIcon,
-    name: "R Programming",
-    description: "Dec 2017. Credential ID KP4MBG5NQEAH"
+    name: 'R Programming',
+    description: 'Dec 2017. Credential ID KP4MBG5NQEAH',
   },
   {
     logo: isqtbIcon,
-    name: "Certified Tester, Foundation Level",
-    description: "Aug 2015. Credential ID 15-CTFL-72914-06"
+    name: 'Certified Tester, Foundation Level',
+    description: 'Aug 2015. Credential ID 15-CTFL-72914-06',
   },
   {
     logo: arcituraIcon,
-    name: "Big Data Scientist",
-    description: "Nov 2017. Credential ID X459ZQQQ49KM"
-  }
+    name: 'Big Data Scientist',
+    description: 'Nov 2017. Credential ID X459ZQQQ49KM',
+  },
 ];
 
 const Education = () => (
@@ -49,8 +49,8 @@ const Education = () => (
         </EuiPageHeaderSection>
       </EuiPageHeader>
       <EuiFlexGrid columns={2}>
-        {iconTypes.map((item, index) => (
-          <EuiFlexItem key={index}>
+        {iconTypes.map((item) => (
+          <EuiFlexItem key={item.logo}>
             <EuiCard
               layout="horizontal"
               icon={<EuiIcon size="xxl" type={item.logo} />}
