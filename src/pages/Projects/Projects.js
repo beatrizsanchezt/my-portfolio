@@ -17,7 +17,7 @@ const cardFooterContent = (
   <EuiFlexGroup justifyContent="flexEnd">
     <EuiFlexItem grow={false}>
       <EuiButton
-        iconType="logoGithub"
+        iconType='logoGithub'
         href="https://github.com/12358-lab/my-portfolio/"
         target="_blank"
       >
