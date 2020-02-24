@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { EuiTitle, EuiSpacer, EuiText } from '@elastic/eui';
 
 import './Blog.css';
 
-// eslint-disable-next-line react/prop-types
 const Paragraph = ({ title, content }) => (
   <>
     <EuiTitle size="s">
@@ -13,5 +13,14 @@ const Paragraph = ({ title, content }) => (
     <EuiSpacer />
   </>
 );
+
+Paragraph.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.node.isRequired,
+};
+
+Paragraph.defaultProps = {
+  title: '',
+};
 
 export default Paragraph;
