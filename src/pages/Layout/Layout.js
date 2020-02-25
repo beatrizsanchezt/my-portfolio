@@ -15,9 +15,9 @@ import './Layout.css';
 
 const Layout = ({ children }) => (
   <>
-    <EuiHeader className="container">
+    <EuiHeader>
       <EuiHeaderSection grow={false}>
-        <EuiHeaderSectionItem border="right">
+        <EuiHeaderSectionItem>
           <EuiHeaderLogo href="/about">
             Beatriz Sanchez - Full Stack Developer
           </EuiHeaderLogo>
