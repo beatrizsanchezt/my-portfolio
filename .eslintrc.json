@@ -27,6 +27,6 @@
         "linebreak-style": ["error", "windows"],
         "max-len": ["error", { "code": 120 }],
         "jest/prefer-expect-assertions": 0,
-        "jest/consistent-test-it": ["error", {"fn": "test", "withinDescribe": "test"}],
+        "jest/consistent-test-it": ["error", {"fn": "test", "withinDescribe": "test"}]
     }
 }

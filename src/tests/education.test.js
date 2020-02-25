@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Education from '../pages/Education/Education';
 
-describe.skip('Education page', () => {
+describe('testing education page', () => {
   const content = 'Bachelor Systems Engineering';
   const title = 'Education and Certificates';
 

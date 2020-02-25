@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Blog from '../pages/Blog/Blog';
 
-describe.skip('Blog page', () => {
+describe('testing blog page', () => {
   const message = 'Take control of your learning experience';
   const title = 'Blog';
 
