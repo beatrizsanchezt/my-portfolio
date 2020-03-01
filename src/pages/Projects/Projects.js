@@ -20,8 +20,9 @@ const cardFooterContent = (
         iconType="logoGithub"
         href="https://github.com/12358-lab/my-portfolio/"
         target="_blank"
-        label="Go to Repo"
-      />
+      >
+        Go to Repo
+      </CustomIconButton>
     </EuiFlexItem>
   </EuiFlexGroup>
 );

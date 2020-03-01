@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Skills from '../pages/Skills/Skills';
 
-describe('testing skills page', () => {
+describe('skills page', () => {
   const message = 'React';
   const title = 'Skills';
 

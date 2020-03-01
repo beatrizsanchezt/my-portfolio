@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import About from '../pages/About/About';
 
-describe('testing about page', () => {
+describe('about page', () => {
   const message = 'constantly challenging myself to learn something new that I can';
   const title = 'About';
 

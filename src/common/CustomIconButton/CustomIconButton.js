@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { EuiButton } from '@elastic/eui';
 
 const CustomIconButton = ({
-  iconType, href, target, label,
+  iconType, href, target, ...rest
 }) => {
   if (process.env.NODE_ENV === 'test') {
     return (
@@ -12,7 +12,7 @@ const CustomIconButton = ({
         href={href}
         target={target}
       >
-        {label}
+        {rest.children}
       </EuiButton>
     );
   }
@@ -22,7 +22,7 @@ const CustomIconButton = ({
       href={href}
       target={target}
     >
-      {label}
+      {rest.children}
     </EuiButton>
   );
 };
@@ -31,7 +31,6 @@ CustomIconButton.propTypes = {
   iconType: PropTypes.string.isRequired,
   href: PropTypes.string,
   target: PropTypes.string,
-  label: PropTypes.string.isRequired,
 };
 
 CustomIconButton.defaultProps = {
