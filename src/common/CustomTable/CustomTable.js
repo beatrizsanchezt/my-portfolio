@@ -30,8 +30,13 @@ CustomTable.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  sorting: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired,
+  sorting: PropTypes.object,
+  onChange: PropTypes.func,
+};
+
+CustomTable.defaultProps = {
+  sorting: undefined,
+  onChange: undefined,
 };
 
 export default CustomTable;
