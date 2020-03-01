@@ -1,9 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import {
-  EuiButton,
-} from '@elastic/eui';
+import { EuiButton } from '@elastic/eui';
 
 const CustomIconButton = ({
   iconType, href, target, label,
@@ -13,7 +11,9 @@ const CustomIconButton = ({
       <EuiButton
         href={href}
         target={target}
-      />
+      >
+        {label}
+      </EuiButton>
     );
   }
   return (
@@ -28,10 +28,15 @@ const CustomIconButton = ({
 };
 
 CustomIconButton.propTypes = {
-  href: PropTypes.string.isRequired,
   iconType: PropTypes.string.isRequired,
-  target: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  target: PropTypes.string,
   label: PropTypes.string.isRequired,
+};
+
+CustomIconButton.defaultProps = {
+  href: undefined,
+  target: undefined,
 };
 
 export default CustomIconButton;
