@@ -1,32 +1,27 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import { EuiBasicTable } from '@elastic/eui';
 
 const CustomTable = ({
-  items, columns, sorting, onChange,
+  sorting, onChange, ...rest
 }) => {
   if (process.env.NODE_ENV === 'test') {
     return (
-      <EuiBasicTable
-        items={items}
-        columns={columns}
-      />
+      <EuiBasicTable {...rest} />
     );
   }
   return (
     <EuiBasicTable
-      items={items}
-      columns={columns}
       sorting={sorting}
       onChange={onChange}
+      {...rest}
     />
   );
 };
 
 CustomTable.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   sorting: PropTypes.object,
   onChange: PropTypes.func,
