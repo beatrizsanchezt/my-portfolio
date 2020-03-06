@@ -7,9 +7,9 @@ import {
   EuiTitle,
   EuiText,
 } from '@elastic/eui';
-import CustomTable from '../../common/CustomTable/CustomTable';
-
+import { sortTableValues } from '../../utils/sort';
 import './Skills.css';
+import CustomTable from '../../common/CustomTable/CustomTable';
 
 const Skills = () => {
   const skillsArray = [
@@ -34,26 +34,9 @@ const Skills = () => {
   const [sortDirection, setsortDirection] = React.useState('asc');
   const [skills] = React.useState(skillsArray);
 
-  const compareValues = (key, order = 'asc') => function innerSort(a, b) {
-    if (!Object.prototype.hasOwnProperty.call(a, key) || !Object.prototype.hasOwnProperty.call(b, key)) {
-      return 0;
-    }
-
-    const varA = typeof a[key] === 'string' ? a[key].toUpperCase() : a[key];
-    const varB = typeof b[key] === 'string' ? b[key].toUpperCase() : b[key];
-
-    let comparison = 0;
-    if (varA > varB) {
-      comparison = 1;
-    } else if (varA < varB) {
-      comparison = -1;
-    }
-    return order === 'desc' ? comparison * -1 : comparison;
-  };
-
   const onTableChange = ({ sort = {} }) => {
     const { field, direction } = sort;
-    skills.sort(compareValues(field, direction));
+    skills.sort(sortTableValues(field, direction));
     setSortField(field);
     setsortDirection(direction);
   };
