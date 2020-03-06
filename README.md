@@ -29,5 +29,4 @@ I took inspiration from [this portfolio](https://andrewborstein.com/).
 
 ## Future features
 
-- Unit Testing with Jest.
-- I want to change the Project section and fetch my projects from Github.
+- Fetch projects from Github.
