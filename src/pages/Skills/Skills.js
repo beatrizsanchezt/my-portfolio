@@ -5,11 +5,11 @@ import {
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
-  EuiBasicTable,
   EuiText,
 } from '@elastic/eui';
 import { sortTableValues } from '../../utils/sort';
 import './Skills.css';
+import CustomTable from '../../common/CustomTable/CustomTable';
 
 const Skills = () => {
   const skillsArray = [
@@ -82,7 +82,7 @@ const Skills = () => {
             </EuiTitle>
           </EuiPageHeaderSection>
         </EuiPageHeader>
-        <EuiBasicTable
+        <CustomTable
           items={skills}
           columns={columns}
           sorting={sorting}

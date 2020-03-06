@@ -5,6 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:jest/all",
         "airbnb"
     ],
     "globals": {
@@ -24,6 +25,8 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "linebreak-style": ["error", "windows"],
-        "max-len": ["error", { "code": 120 }]
-    }    
+        "max-len": ["error", { "code": 120 }],
+        "jest/prefer-expect-assertions": 0,
+        "jest/consistent-test-it": ["error", {"fn": "test", "withinDescribe": "test"}]
+    }
 }

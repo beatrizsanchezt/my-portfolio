@@ -6,23 +6,23 @@ import {
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiTitle,
-  EuiButton,
   EuiCard,
   EuiFlexGroup,
   EuiFlexItem,
 } from '@elastic/eui';
+import CustomIconButton from '../../common/CustomIconButton/CustomIconButton';
 import projectIcon from '../../assets/images/my-portfolio.png';
 
 const cardFooterContent = (
   <EuiFlexGroup justifyContent="flexEnd">
     <EuiFlexItem grow={false}>
-      <EuiButton
+      <CustomIconButton
         iconType="logoGithub"
         href="https://github.com/12358-lab/my-portfolio/"
         target="_blank"
       >
         Go to Repo
-      </EuiButton>
+      </CustomIconButton>
     </EuiFlexItem>
   </EuiFlexGroup>
 );
